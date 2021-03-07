@@ -38,6 +38,6 @@ monitors:
     
   - id: ANiAPI
     name: ANi API
-    url: 'https://ani.rip/'
+    url: 'https://api.ani.rip/ani/api/anigamer_new.xml'
     method: GET
     expectStatus: 200
