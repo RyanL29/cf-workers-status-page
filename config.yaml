@@ -5,33 +5,39 @@ settings:
   daysInHistogram: 90 # number of days you want to display in histogram
   collectResponseTimes: true # collects avg response times from CRON locations
 
-  allmonitorsOperational: 'All Systems Operational'
-  notAllmonitorsOperational: 'Not All Systems Operational'
-  monitorLabelOperational: 'Operational'
-  monitorLabelNotOperational: 'Not Operational'
-  monitorLabelNoData: 'No data'
-  dayInHistogramNoData: 'No data'
-  dayInHistogramOperational: 'All good'
-  dayInHistogramNotOperational: ' incident(s)' # xx incident(s) recorded
+  allmonitorsOperational: '所有系統均正常運作中'
+  notAllmonitorsOperational: '有部分系統出現問題'
+  monitorLabelOperational: '正常'
+  monitorLabelNotOperational: '出現問題'
+  monitorLabelNoData: '沒有數據'
+  dayInHistogramNoData: '沒有數據'
+  dayInHistogramOperational: '正常'
+  dayInHistogramNotOperational: ' 錯誤' # xx incident(s) recorded
 
 monitors:
-  - id: workers-cloudflare-com # unique identifier
-    name: workers.cloudflare.com
-    description: 'You write code. They handle the rest.' # default=empty
-    url: 'https://workers.cloudflare.com/' # URL to fetch
+  - id: ANiSystem # unique identifier
+    name: ANi System
+    description: '主要伺服器' # default=empty
+    url: 'https://aniprivate.mynetgear.com/404.html' # URL to fetch
     method: GET # default=GET
     expectStatus: 200 # operational status, default=200
     followRedirect: false # should fetch follow redirects, default=false
 
-  - id: www-cloudflare-com
-    name: www.cloudflare.com
-    description: 'Built for anything connected to the Internet.'
-    url: 'https://www.cloudflare.com'
+  - id: ANiStorage
+    name: ANi NAS
+    description: '儲存伺服器'
+    url: 'https://aniprivate.mynetgear.com/404.html'
     method: GET
     expectStatus: 200
 
-  - id: blog-cloudflare-com
-    name: The Cloudflare Blog
-    url: 'https://blog.cloudflare.com/'
+  - id: OpenANi
+    name: Open ANi
+    url: 'https://aniopen.a-ni.workers.dev/'
+    method: GET
+    expectStatus: 200
+    
+  - id: ANiAPI
+    name: ANi API
+    url: 'https://aniopen.a-ni.workers.dev/'
     method: GET
     expectStatus: 200
