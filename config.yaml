@@ -38,6 +38,6 @@ monitors:
     
   - id: ANiAPI
     name: ANi API
-    url: 'https://aniopen.a-ni.workers.dev/'
+    url: 'https://ani.rip/'
     method: GET
     expectStatus: 200
