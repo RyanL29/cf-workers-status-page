@@ -40,6 +40,10 @@
     border-radius: 100px;
   }
 
+  body {
+    margin: 0 auto !important;
+  }
+  
   .bar.green {
     @apply bg-green-400 dark:bg-green-700;
   }
