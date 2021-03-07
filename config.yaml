@@ -21,7 +21,7 @@ monitors:
     url: 'http://aniprivate.mynetgear.com/404.html' # URL to fetch
     method: GET # default=GET
     expectStatus: 200 # operational status, default=200
-    followRedirect: false # should fetch follow redirects, default=false
+    followRedirect: true # should fetch follow redirects, default=false
 
   - id: ANiStorage
     name: ANi NAS
@@ -29,15 +29,18 @@ monitors:
     url: 'http://aniprivate.mynetgear.com/404.html'
     method: GET
     expectStatus: 200
-
+    followRedirect: true # should fetch follow redirects, default=false
+    
   - id: OpenANi
     name: Open ANi
     url: 'https://aniopen.a-ni.workers.dev/'
     method: GET
     expectStatus: 200
+    followRedirect: true # should fetch follow redirects, default=false
     
   - id: ANiAPI
     name: ANi API
     url: 'https://api.ani.rip/ani/api/anigamer_new.xml'
     method: GET
     expectStatus: 200
+    followRedirect: true # should fetch follow redirects, default=false
