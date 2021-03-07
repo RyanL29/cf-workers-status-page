@@ -7,8 +7,8 @@ settings:
 
   allmonitorsOperational: '所有系統均正常運作中'
   notAllmonitorsOperational: '有部分系統出現問題'
-  monitorLabelOperational: '正常'
-  monitorLabelNotOperational: '出現問題'
+  monitorLabelOperational: 'Operational'
+  monitorLabelNotOperational: 'Error'
   monitorLabelNoData: '沒有數據'
   dayInHistogramNoData: '沒有數據'
   dayInHistogramOperational: '正常'
