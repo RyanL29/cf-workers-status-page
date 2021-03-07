@@ -2,7 +2,7 @@ settings:
   title: 'ANi Status'
   url: 'https://status.ani.rip' # used for Slack messages
   logo: 'https://raw.githubusercontent.com/RyanL-29/aniopen/master/logo-192x192.png' # image in ./public/ folder
-  daysInHistogram: 180 # number of days you want to display in histogram
+  daysInHistogram: 100 # number of days you want to display in histogram
   collectResponseTimes: true # collects avg response times from CRON locations
 
   allmonitorsOperational: '所有系統均正常運作中'
