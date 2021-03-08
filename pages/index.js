@@ -45,12 +45,6 @@ export default function Index({ config, kvMonitors, kvMonitorsLastUpdate }) {
     <div className="min-h-screen">
       <Head>
         <title>{config.settings.title}</title>
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://status.ani.rip/">
-    <meta property="og:title" content="ANi Status | Status Of The ANi System">
-    <meta property="og:description" content="Real time monitoring ANi System">
-    <meta property="og:image" content="https://raw.githubusercontent.com/RyanL-29/aniopen/master/aniiconw.png">
-    <meta rel="shortcut icon" content="https://raw.githubusercontent.com/RyanL-29/aniopen/master/favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="./style.css" />
         <script>
           {`
