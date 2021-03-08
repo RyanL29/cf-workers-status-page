@@ -1,7 +1,7 @@
 settings:
-  title: 'ANi Status'
-  url: 'https://status.ani.rip' # used for Slack messages
-  logo: 'https://raw.githubusercontent.com/RyanL-29/aniopen/master/aniiconw.png' # image in ./public/ folder
+  title: 'Liberate City Status'
+  url: 'https://status.gtarphk.com' # used for Slack messages
+  logo: 'https://raw.githubusercontent.com/RyanL-29/lbcity/main/artworks-000435425847-da5cv7-t500x500.png' # image in ./public/ folder
   daysInHistogram: 100 # number of days you want to display in histogram
   collectResponseTimes: true # collects avg response times from CRON locations
 
@@ -15,32 +15,34 @@ settings:
   dayInHistogramNotOperational: ' 錯誤' # xx incident(s) recorded
 
 monitors:
-  - id: ANiSystem # unique identifier
-    name: ANi System
-    description: '主要伺服器' # default=empty
-    url: 'http://aniprivate.mynetgear.com/404.html' # URL to fetch
+  - id: mainser # unique identifier
+    name: 核心伺服器
+    description: '伺服器運作狀態 (不是遊戲程序狀態)' # default=empty
+    url: 'http://gtarphk.com:8080/dashboard/' # URL to fetch
     method: GET # default=GET
     expectStatus: 200 # operational status, default=200
     followRedirect: true # should fetch follow redirects, default=false
 
-  - id: ANiStorage
-    name: ANi NAS
-    description: '儲存伺服器'
-    url: 'http://aniprivate.mynetgear.com/404.html'
+  - id: gameser
+    name: FXServer
+    description: '遊戲程序狀態'
+    url: 'http://103.109.101.208:30120/'
     method: GET
     expectStatus: 200
     followRedirect: true # should fetch follow redirects, default=false
     
-  - id: OpenANi
-    name: Open ANi
-    url: 'https://aniopen.a-ni.workers.dev/'
+  - id: fivemm
+    name: FiveM 伺服器
+    description: 'Cfx.re 狀態'
+    url: 'https://runtime.fivem.net/'
     method: GET
-    expectStatus: 200
+    expectStatus: 403
     followRedirect: true # should fetch follow redirects, default=false
     
-  - id: ANiAPI
-    name: ANi API
-    url: 'https://api.ani.rip/ani/api/anigamer_new.xml'
+  - id: fivemauth
+    name: FiveM 驗證伺服器
+    description: '負責對玩家及伺服器進行驗證'
+    url: 'https://keymaster.fivem.net/'
     method: GET
-    expectStatus: 200
+    expectStatus: 403
     followRedirect: true # should fetch follow redirects, default=false
