@@ -17,7 +17,7 @@ settings:
 monitors:
   - id: mainser # unique identifier
     name: 核心伺服器
-    description: '伺服器運作狀態 (不是遊戲程序狀態)' # default=empty
+    description: '伺服器運作狀態 (不是遊戲程序狀態 - 可能因DDoS防火牆而無辦法回報正常結果)' # default=empty
     url: 'http://gtarphk.com:8080/dashboard/faq.html' # URL to fetch
     method: GET # default=GET
     expectStatus: 200 # operational status, default=200
