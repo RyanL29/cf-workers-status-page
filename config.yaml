@@ -18,7 +18,7 @@ monitors:
   - id: mainser # unique identifier
     name: 核心伺服器
     description: '伺服器運作狀態 (不是遊戲程序狀態)' # default=empty
-    url: 'http://gtarphk.com:8080/dashboard/' # URL to fetch
+    url: 'http://gtarphk.com:8080/dashboard/faq.html' # URL to fetch
     method: GET # default=GET
     expectStatus: 200 # operational status, default=200
     followRedirect: true # should fetch follow redirects, default=false
@@ -26,7 +26,7 @@ monitors:
   - id: gameser
     name: FXServer
     description: '遊戲程序狀態'
-    url: 'http://103.109.101.208:30120/'
+    url: 'https://cfx.re/join/2l3ro7'
     method: GET
     expectStatus: 200
     followRedirect: true # should fetch follow redirects, default=false
